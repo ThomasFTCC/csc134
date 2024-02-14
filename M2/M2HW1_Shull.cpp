@@ -49,13 +49,13 @@ void askQuestion(){
                 questionOne();
         }   
             else if(question == 2){ //Question 2 - General Crates
-                cout << "answering quesion 2";
+                questionTwo();
         }   
             else if(question == 3){ //Question 3 - Pizza Party
-                cout << "anwwering 3";
+                questionThree();
         }
             else if(question == 4){//Question 4 - Cheering Program
-                cout << "answeung 4";
+                questionFour();
         }
             else {
                 cout << "Not a valid input. Please input a 1, 2, 3, or 4." << endl;
@@ -66,5 +66,6 @@ void askQuestion(){
 
 //Run the first questions program
 void questionOne(){
+    cout << "---------------------------------------------------------------" << endl;
     cout << "running question one";
 }
