@@ -22,9 +22,8 @@ void questionThree();
 void questionFour();
 
 int main(){
-    //TODO add selection for each assignment
+    //TODO Question 1, question 2, question 3, question 4
     //Question Selection
-    
     askQuestion();
 
     return 0;
@@ -64,8 +63,45 @@ void askQuestion(){
         }
 }
 
-//Run the first questions program
+//Run the first question's program
 void questionOne(){
     cout << "---------------------------------------------------------------" << endl;
-    cout << "running question one";
+    
+    //Setting up vars
+    string bankUserName;
+    double bankBalance = 0;
+    double bankDeposit = 0;
+    double bankWithdrawl = 0;
+
+    //Get name
+    cout << "Username: ";
+    cin >> bankUserName;
+    cout << endl << "Welcome " + bankUserName + ".";
+
+    //Get account balance
+    cout << "What is your account balance?" << endl;
+    
+
+    cout << "How much would you like to deposit?" << endl << "Deposit: ";
+    cin >>  bankDeposit;
+    cout << endl;
+
+}
+
+//Run the second question's program
+void questionTwo(){
+    cout << "---------------------------------------------------------------" << endl;
+    cout << "running question two";
+}
+
+//Run the third question's program
+void questionThree(){
+    cout << "---------------------------------------------------------------" << endl;
+    cout << "running question Three";
+}
+
+//Run the fourth question's program
+void questionFour(){
+    cout << "---------------------------------------------------------------" << endl;
+    cout << "running question Four";
 }
