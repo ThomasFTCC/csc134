@@ -1,14 +1,14 @@
 #include <iostream>
 #include <iomanip>
+#include <string>
 using namespace std;
 
-void myFunction();
 
 int main(){
-    myFunction();
+    string num;
+    cout << "Name: ";
+    getline(cin, num);
 
-}
+    cout << num;
 
-void myFunction(){
-    cout << "run";
 }
