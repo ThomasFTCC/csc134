@@ -46,28 +46,30 @@ void askQuestion(){
     cin >> question;
 
     if (question == 1){ //Question 1 - Banking Transaction
+        cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
          questionOne();
     }   
         else if(question == 2){ //Question 2 - General Crates
+            cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
             questionTwo();
     }   
         else if(question == 3){ //Question 3 - Pizza Party
+            cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
             questionThree();
     }
         else if(question == 4){//Question 4 - Cheering Program
+            cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
             questionFour();
     }
         else {
             cout << "Not a valid input. Please input a 1, 2, 3, or 4." << endl;
-            cout << "/////////////////////////////////////////////////////////////////" << endl;
+            cout << endl << "................................................................." << endl << endl;
             askQuestion();
     }
 }
 
 //Run the first question's program
 void questionOne(){
-    cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
-    
     //Setting up vars
     string bankUserName;
     double bankBalance = 0;
@@ -118,7 +120,6 @@ void questionOne(){
 
 //Run the second question's program
 void questionTwo(){
-    cout << "/////////////////////////////////////////////////////////////////" << endl << endl;
     //Majority copied from M2LAB1
     //Vars
     double length, width, height;
@@ -159,8 +160,6 @@ void questionTwo(){
 
 //Run the third question's program
 void questionThree(){
-    cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
-    // Todo If pizza left is less than 0 type message saying so
     //Vars
     int pizzaOrderNum;
     int pizzaSlicesPer;
@@ -179,7 +178,7 @@ void questionThree(){
 
     cout << "..........................................................................." << endl << endl;
     int pizzaLeft = (pizzaOrderNum*pizzaSlicesPer)/(pizzaVisitors*PIZZA_PER_VISITOR);
-    if (pizzaLeft >=0){
+    if (pizzaLeft >0){
         cout << "There will be " << pizzaLeft << " slices of pizza left";
     }
     else {
@@ -191,8 +190,20 @@ void questionThree(){
 
 //Run the fourth question's program
 void questionFour(){
-    cout << "/////////////////////////////////////////////////////////////////" << endl;
-    cout << "running question Four";
+    //vars
+    string chearSchool = "FTCC ";
+    string chearTeam = "Trojans ";
+    string chearLetsGo = "Let's Go ";
+
+    //String Concatenation
+    string chearOne = chearLetsGo + chearSchool;
+    string chearTwo = chearLetsGo + chearTeam;
+
+    //Display Chear
+    for (int i = 0; i < 3; i++){
+        cout << chearOne << endl;
+    }
+    cout << chearTwo << endl;
 }
 
 //Return to menu
