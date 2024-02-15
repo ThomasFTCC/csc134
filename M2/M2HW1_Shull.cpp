@@ -9,8 +9,6 @@ Thomas Shull
 I did this to challenge myself a bit(I was bored) and to work ahead. I used the textbook and W3 schools for refrence on the things that we 
 haven't gone over in class yet. If gradewise you would rather have it turned in individuality please email me at shullt6371@student.faytechcc.edu. */
 
-//I got a inconsistant bug where the program would repeat its inputs. I believe its with the git software as it is impossible for me to reproduce
-
 #include <iostream>
 #include <iomanip>
 #include <string>
@@ -26,7 +24,7 @@ void questionFour();
 void askReturn();
 
 int main(){
-    //TODO Question 1, question 2, question 3, question 4
+    //TODOquestion 4
     //Question Selection
     askQuestion();
 
@@ -112,7 +110,7 @@ void questionOne(){
 
     //Display Infomation
     cout << "User: " << bankUserName << "\t\t" << "Account Number: " <<  bankRandomNum << endl << endl;
-    cout << "Account Balance: \t$" << (bankBalance + bankDeposit - bankWithdrawl) << endl;
+    cout << "Account Balance: \t$" << (bankBalance + bankDeposit - bankWithdrawl);
 
     askReturn();
 
@@ -120,14 +118,75 @@ void questionOne(){
 
 //Run the second question's program
 void questionTwo(){
-    cout << "/////////////////////////////////////////////////////////////////" << endl;
-    cout << "running question two";
+    cout << "/////////////////////////////////////////////////////////////////" << endl << endl;
+    //Majority copied from M2LAB1
+    //Vars
+    double length, width, height;
+    double volume;
+    double cost;
+    double charge;
+    double profit;
+
+    //Const Vars
+    const double COST_PER_CUBIC_FOOT = 0.3;
+    const double CHARGE_PER_CUBIC_FOOT = 0.52;
+    
+    //Take mesurment from user input
+    cout << "Length: ";
+    cin >> length;
+    cout << endl << "Width: ";
+    cin >> width;
+    cout << endl << "Height: ";
+    cin >> height;
+
+
+    //Do Calculations
+    volume = length * width * height;
+    cost = volume * COST_PER_CUBIC_FOOT;
+    charge = volume * CHARGE_PER_CUBIC_FOOT;
+    profit = charge - cost;
+
+    //Print the calculations
+    cout << fixed << setprecision(2);
+    cout << "..........................................................................." << endl;
+    cout << "Crate Volume:\t\t " << volume << " Cubic Feet" << endl;
+    cout << "Production Costs:\t $" << cost << endl;
+    cout << "Charge:\t\t\t $" << charge << endl;
+    cout << "Profit:\t\t\t $" << profit;
+
+    askReturn();
 }
 
 //Run the third question's program
 void questionThree(){
-    cout << "/////////////////////////////////////////////////////////////////" << endl;
-    cout << "running question Three";
+    cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
+    // Todo If pizza left is less than 0 type message saying so
+    //Vars
+    int pizzaOrderNum;
+    int pizzaSlicesPer;
+    int pizzaVisitors;
+
+    //Const
+    int PIZZA_PER_VISITOR = 3;
+
+    //Ask input
+    cout << "How many pizzas are you ordering?" << endl << "Pizzas: ";
+    cin >> pizzaOrderNum;
+    cout << endl << "How many slices per pizza?" << endl << "Slices: ";
+    cin >> pizzaSlicesPer;
+    cout << endl << "How many guests will be attending?" << endl << "Guests: ";
+    cin >> pizzaVisitors;
+
+    cout << "..........................................................................." << endl << endl;
+    int pizzaLeft = (pizzaOrderNum*pizzaSlicesPer)/(pizzaVisitors*PIZZA_PER_VISITOR);
+    if (pizzaLeft >=0){
+        cout << "There will be " << pizzaLeft << " slices of pizza left";
+    }
+    else {
+        cout << "There will not be enough pizza for everyone!";
+    }
+
+    askReturn();
 }
 
 //Run the fourth question's program
@@ -138,13 +197,13 @@ void questionFour(){
 
 //Return to menu
 void askReturn(){
-    cout << endl << "/////////////////////////////////////////////////////////////////" << endl;
+    cout << endl << endl << "/////////////////////////////////////////////////////////////////" << endl;
     
     string askReturnAnswer;
-    cout << endl << "Type 'Return' to return to the main page" << endl;
+    cout << endl << "Type 'return' to return to the main page" << endl;
     cin >> askReturnAnswer;
 
-    if (askReturnAnswer == "Return"){
+    if (askReturnAnswer == "return"){
         cout << endl << "/////////////////////////////////////////////////////////////////" << endl;
         cout << endl;
         askQuestion();
