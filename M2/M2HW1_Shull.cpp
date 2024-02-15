@@ -31,7 +31,7 @@ int main(){
     return 0;
 }
 
-//Functions Definitions
+//Functions Definitions / Code for each question
 
 //Function to ask which assignment you want to view
 void askQuestion(){
@@ -68,7 +68,7 @@ void askQuestion(){
     }
 }
 
-//Run the first question's program
+//Question One
 void questionOne(){
     //Setting up vars
     string bankUserName;
@@ -118,7 +118,7 @@ void questionOne(){
 
 }
 
-//Run the second question's program
+//Question Two
 void questionTwo(){
     //Majority copied from M2LAB1
     //Vars
@@ -158,7 +158,7 @@ void questionTwo(){
     askReturn();
 }
 
-//Run the third question's program
+//Question Three
 void questionThree(){
     //Vars
     int pizzaOrderNum;
@@ -188,7 +188,7 @@ void questionThree(){
     askReturn();
 }
 
-//Run the fourth question's program
+//Question Four
 void questionFour(){
     //vars
     string chearSchool = "FTCC ";
@@ -220,6 +220,9 @@ void askReturn(){
         cout << endl << "/////////////////////////////////////////////////////////////////" << endl;
         cout << endl;
         askQuestion();
+    }
+    else{
+        askReturn();
     }
 
 }
