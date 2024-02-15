@@ -24,8 +24,6 @@ void questionFour();
 void askReturn();
 
 int main(){
-    //TODOquestion 4
-    //Question Selection
     askQuestion();
 
     return 0;
