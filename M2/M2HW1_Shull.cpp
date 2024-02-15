@@ -204,6 +204,8 @@ void questionFour(){
         cout << chearOne << endl;
     }
     cout << chearTwo << endl;
+
+    askReturn();
 }
 
 //Return to menu
