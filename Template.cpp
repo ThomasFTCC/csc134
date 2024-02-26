@@ -12,3 +12,8 @@ int main(){
 
     return 0;
 }
+
+
+
+#include <iomanip>
+cout << fixed << setprecision(x);
