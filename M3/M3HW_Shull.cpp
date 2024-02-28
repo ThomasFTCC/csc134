@@ -9,7 +9,7 @@ Thomas Shull
 using namespace std;
 
 //functions
-void askQuestion;
+void askQuestion();
 void questionOne();
 void questionTwo();
 void questionThree();
@@ -26,10 +26,10 @@ int main(){
 void askQuestion(){
     int question;
     cout << "Input homework question you would like to view from its corresponding number." << endl << endl;
-    cout << "Chat Bot: \t1" << endl;
-    cout << "Receipt Calculator: \t2" << endl;
-    cout << "Choose Your Own Adventure: \t\t3" << endl;
-    cout << "Math practice: \t4" << endl << endl;
+    cout << "Chat Bot: \t\t\t1" << endl;
+    cout << "Receipt Calculator: \t\t2" << endl;
+    cout << "Choose Your Own Adventure: \t3" << endl;
+    cout << "Math practice: \t\t\t4" << endl << endl;
 
     cout << "Question: ";
     cin >> question;
@@ -57,9 +57,37 @@ void askQuestion(){
     }
 }
 
-void questionOne(){
+void questionOne(){ //chatbot
+
+    void botAskAgain();
+
+    //Vars
+    string playerName;
+    string playerChoice;
+
+    cout << "Hello! My name is Steve. What is your name?\n";
+    cin >> playerName;
+    cout << "It's nice to meet you " << playerName << "! What would you like to talk about " << playerName << "? Your options are sports, space, games, or animals.\n";
+    cin >> playerChoice;
+    if (playerChoice == "sports"){
+        cout << 0;
+    } else if (playerChoice == "space"){
+        cout << 1;
+    } else if (playerChoice == "games"){
+        cout << 2;
+    } else if (playerChoice == "games"){
+        cout << 3;
+    } else if (playerChoice == "animals"){
+        cout << 4;
+    } else {
+        botAskAgain();
+    }
 
 }
+
+void botAskAgain(){
+        cout << "Im sorry, I don't know anything about that.";
+    }
 
 void questionTwo(){
 
