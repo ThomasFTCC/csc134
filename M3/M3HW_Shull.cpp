@@ -67,18 +67,29 @@ void questionOne(){ //chatbot
 
     cout << "Hello! My name is Steve. What is your name?\n";
     cin >> playerName;
-    cout << "It's nice to meet you " << playerName << "! What would you like to talk about " << playerName << "? Your options are sports, space, games, or animals.\n";
+    cout << "It's nice to meet you " << playerName << "! What would you like to talk about " << playerName << "? Your options are sports, space, or games.\n";
     cin >> playerChoice;
     if (playerChoice == "sports"){
         cout << 0;
     } else if (playerChoice == "space"){
-        cout << 1;
+        cout << "Space is my favorite topic! Would you like to hear a fun fact about space? (yes or no)" << endl;
+        cin >> playerChoice;
+        if(playerChoice == "yes"){
+            cout << "Here you go! The planet Jupiter can fit 1,300 Earths inside of it. Isn't that insane? (yes or no)" << endl;
+            cin >> playerChoice;
+            if (playerChoice == "yes"){
+                cout << "I'm glad you agree! Come back tomorrow for a new fun fact" << endl;
+            } else if(playerChoice){
+                cout << "Oh.....ok"<< endl;
+            }
+            }
     } else if (playerChoice == "games"){
-        cout << 2;
+        cout << "Good choice! What is your favorite game?" << endl:
+        cin >> playerChoice;
+        cout << playerChoice << " sounds like a fun game! My favorite is Minecraft. Do you like minecraft? (yes or no)" << endl;
+        if(playerChoice)
     } else if (playerChoice == "games"){
         cout << 3;
-    } else if (playerChoice == "animals"){
-        cout << 4;
     } else {
         botAskAgain();
     }
@@ -86,8 +97,22 @@ void questionOne(){ //chatbot
 }
 
 void botAskAgain(){
-        cout << "Im sorry, I don't know anything about that.";
+        cout << "Im sorry, I don't know anything about that." << endl;
+        cout << "Would you like to restart the conversation?" << endl << "yes or no" << endl;
+        string botAskAgainAnswer;
+        cin >> botAskAgainAnswer;
+
+        if (botAskAgainAnswer == "yes"){
+            questionOne();
+        } else if(botAskAgainAnswer == "no"){
+            askQuestion();
+        }else{
+            cout << "Not a valid input" << endl;
+            botAskAgain();
+        }
     }
+
+
 
 void questionTwo(){
 
