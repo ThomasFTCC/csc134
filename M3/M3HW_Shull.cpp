@@ -186,8 +186,18 @@ Ask if dine in or takeaway if dine in add 15% tip
     cout << "Total:" << "\t\t$" << recieptTotal << endl;
 }
 
-void questionThree(){
-
+void questionThree(){   //Adventure game
+    int advChoice;
+    cout << "You approach have just taken off in your brand new space ship.\nOn your first flight out of the shipyard you come across a small cluster of asteroids that is not marked on the system map.\nDo you CHECK IT OUT (1) or IGNORE IT (2)." << endl;
+    cin >> advChoice;
+    if(advChoice == 1){
+        cout << "As you get closer to the asteroids you start thinking about how bad of an idea this was. You don't have much practice you aren't able to dodge all of the asteroids and you crash into them." << endl;
+        //die question to return to question menur or restart
+    } else if(advChoice == 2){
+        cout << "OPTION 2";
+    } else{
+        cout << "Your ships computer causes a meltdown and you crashed and died (Please input a valid input when it is presented to prevent future falure)";
+    }
 }
 
 void questionFour(){
