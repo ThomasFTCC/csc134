@@ -6,6 +6,7 @@ Thomas Shull
 */
 
 #include <iostream>
+#include <iomanip> // setprecision(x)
 using namespace std;
 
 int main(){
