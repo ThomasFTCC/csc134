@@ -145,7 +145,7 @@ Ask if dine in or takeaway if dine in add 15% tip
     cout << "Thank you for dining with us" << endl;
     cout << "--------------------" << endl;
     // Set up Vars
-    string recieptMealType = "Text to prevent issue";
+    int recieptMealType = 0; //"Text to prevent issue";
     // all in dollars except the precent
     double recieptMealPrice = 0;
     double recieptDineInTip;
@@ -153,13 +153,14 @@ Ask if dine in or takeaway if dine in add 15% tip
     double recieptTipPayed = 0;
     double recieptTax = 0.08;
     double recieptTaxPayed;
+    string recieptMealName;
 
     //Input
     cout << "What was the cost of your meal?\n";
     cin >> recieptMealPrice;
     cout << endl << "Did you dine-in or takeout today? Please type 1 for dine-in or 2 for takeout" << endl;
     cin >> recieptMealType;
-    if(recieptMealType == "dine-in" && recieptMealType == "takeout"){
+    if(recieptMealType != 1 && recieptMealType != 2){
         cout << "Please input a valid meal type" << endl << endl;
         cout << endl << "/////////////////////////////////////////////////////////////////" << endl << endl;
         questionTwo();
@@ -167,10 +168,12 @@ Ask if dine in or takeaway if dine in add 15% tip
        
 
     // Do Calculations 
-    if (recieptMealType == "dine-in"){
+    if (recieptMealType == 1){
         recieptDineInTip = 0.15;
+        recieptMealName = "Dine-In";
     } else {
         recieptDineInTip = 0;
+        recieptMealName = "Takeout";
     }
     recieptTipPayed = recieptMealPrice * recieptDineInTip;
     recieptTaxPayed = recieptMealPrice * recieptTax;
@@ -180,7 +183,7 @@ Ask if dine in or takeaway if dine in add 15% tip
     cout << fixed << setprecision(2);
     cout << endl << "--------------------" << endl;
 
-    cout << recieptMealType << ":" << "\t$" << recieptMealPrice << endl;
+    cout << recieptMealName << ":" << "\t$" << recieptMealPrice << endl;
     cout << "Tax:" << "\t\t$" << recieptTaxPayed << endl;
     cout << "Tip:" << "\t\t$" << recieptTipPayed << endl;
     cout << "--------------------" << endl;
