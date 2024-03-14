@@ -7,6 +7,7 @@ Thomas Shull
 
 #include <iostream>
 #include <iomanip>
+#include <cstdlib>
 using namespace std;
 
 //functions
@@ -223,5 +224,33 @@ void advGameDeath(){
 }
 
 void questionFour(){ //Math Practice
+    int firstNum;
+    int secondNum;
+    int mathUserAnswer;
+    int mathAnswer;
+    int mathUserEndInput;
 
+    srand(time(0));
+    firstNum = (rand()%9)+1;
+    secondNum = (rand()%9)+1;
+    mathAnswer = firstNum + secondNum;
+    cout << "Math Test:\n" << firstNum << " + " << secondNum << " =" << endl;
+    cin >> mathUserAnswer;
+    if (mathUserAnswer == mathAnswer){
+        cout << endl << "You're right, good job! Would you like to\nTry another: 1\nReturn to menu: 2" << endl;
+        cin >> mathUserEndInput;
+        if (mathUserEndInput == 1){
+            questionFour();
+        } else if(mathUserEndInput == 2){
+            askQuestion();
+        }
+    } else if (mathUserAnswer != mathAnswer){
+        cout << endl << "That is not right. Would you like to\nTry another: 1\nReturn to menu: 2" << endl;
+        cin >> mathUserEndInput;
+        if (mathUserEndInput == 1){
+            questionFour();
+        } else if(mathUserEndInput == 2){
+            askQuestion();
+        }
+    }
 }
