@@ -187,19 +187,41 @@ Ask if dine in or takeaway if dine in add 15% tip
 }
 
 void questionThree(){   //Adventure game
+    void advGameDeath();
+
     int advChoice;
     cout << "You approach have just taken off in your brand new space ship.\nOn your first flight out of the shipyard you come across a small cluster of asteroids that is not marked on the system map.\nDo you CHECK IT OUT (1) or IGNORE IT (2)." << endl;
     cin >> advChoice;
     if(advChoice == 1){
         cout << "As you get closer to the asteroids you start thinking about how bad of an idea this was. You don't have much practice you aren't able to dodge all of the asteroids and you crash into them." << endl;
-        //die question to return to question menur or restart
+        advGameDeath();
     } else if(advChoice == 2){
-        cout << "OPTION 2";
+        cout << "You decide to advoid the asteroids and take a detour.\nYou now have a choice on what to do next. Do you want to GO EXPLORING(1) or GO TRADING(2)" << endl;
+        cin >> advChoice;
+        if (advChoice == 1){
+            cout << "You go and explore the galaxy, making friends and riches as you go.\nThe End" << endl;
+        } else if(advChoice == 2){
+            cout << "While hauling cargo you are attacked and killed by pirates.\n The End" << endl;
+            advGameDeath();
+        }
     } else{
         cout << "Your ships computer causes a meltdown and you crashed and died (Please input a valid input when it is presented to prevent future falure)";
+        advGameDeath();
     }
 }
 
-void questionFour(){
+void advGameDeath(){
+    int advChoiceDeath;
+    cout << "Return to menu(1) or restart story (2)" << endl;
+    cin >> advChoiceDeath;
+    if (advChoiceDeath == 1){
+        askQuestion();
+    } else if(advChoiceDeath == 2){
+        questionThree();
+    }
+
+}
+
+void questionFour(){ //Math Practice
 
 }
