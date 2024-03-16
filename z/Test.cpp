@@ -5,10 +5,33 @@ using namespace std;
 
 
 int main(){
-    string num;
-    cout << "Name: ";
-    getline(cin, num);
-
-    cout << num;
+    cout << "First number: ";
+    int first;
+    cin >> first;
+    if (!cin.fail())
+    {
+    cout << "Second number: ";
+    int second;
+    cin >> second;
+    if (!cin.fail())
+    {
+        if (second != 0)
+        {
+            cout << first % second << endl;
+        }
+        else
+        {
+            cout << "Error" << endl;
+        }
+    }
+    else
+    {
+        cout << "Error" << endl;
+    }   
+    }
+    else
+    {
+    cout << "Error" << endl;
+    }
 
 }
