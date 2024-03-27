@@ -5,33 +5,12 @@ using namespace std;
 
 
 int main(){
-    cout << "First number: ";
-    int first;
-    cin >> first;
-    if (!cin.fail())
-    {
-    cout << "Second number: ";
-    int second;
-    cin >> second;
-    if (!cin.fail())
-    {
-        if (second != 0)
-        {
-            cout << first % second << endl;
-        }
-        else
-        {
-            cout << "Error" << endl;
-        }
+    int i = 1;
+    while(GetKeyState){
+        cout << "Hello World" << endl;
+        i++;
     }
-    else
-    {
-        cout << "Error" << endl;
-    }   
-    }
-    else
-    {
-    cout << "Error" << endl;
-    }
+    cout << "Test";
+
 
 }
